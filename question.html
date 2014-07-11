@@ -9,7 +9,8 @@
     <script type="text/javascript" src="js/less.js"></script>
     <!-- Put this script tag to the <head> of your page -->
     <script type="text/javascript" src="http://vk.com/js/api/openapi.js?113"></script>
-
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
     <script type="text/javascript">
         VK.init({apiId: 4424623, onlyWidgets: true});
     </script>
@@ -21,8 +22,55 @@
             text-align: center;
         }  
     </style>
+      
+      <script>
+        $(function() {
+            var hwindow = screen.height;
+            if(hwindow >= 1024) {
+                hwindow -= 250;
+            } else {
+                hwindow = hwindow/2;
+            }
+            $('.div_content').css('min-height', hwindow);
+
+            $('._message .btn_sim').click(function() {
+                $('._backForm').show();
+           });
+           $('._close a').click(function(){
+            $('._backForm').hide();
+           });
+            var h = $(window).height();
+            var e = $('._modalWindow').height();
+            });
+      </script>
+      
   </head>
   <body>
+      <div class="_backForm">
+  <div class="_modalWindow">
+    <div class="_close">
+      <a href="javascript:">Закрыть</a>
+    </div>
+    <img src="/q/images/onmain.png" alt="">
+    <form action="">
+      <div>
+      Имя: <br>
+      <input type="text">
+      </div>
+      <div>
+      Телефон или e-mail: <br>
+      <input type="text">
+      </div>
+      <div>
+      Доп. информация: <br>
+      <textarea></textarea>
+      </div>
+      <div>
+      <input class="btn_sim" type="submit" value="Отправить">
+      </div>
+    </form>
+  </div>
+</div>
     <div class="div_header">
       <div class="siteWidth">
         <div class="_logo">
@@ -59,7 +107,7 @@
           <div>email: info@arzoli.ru</div>
         </div>
         <div class="_message">
-          <a href="#" class="btn_sim">Оставьте сообщение</a>
+          <a href="javascript:" class="btn_sim">Оставьте сообщение</a>
         </div>
       </div>
     </div>
