@@ -35,18 +35,22 @@
       <a href="javascript:">Закрыть</a>
     </div>
     <img src="/q/images/onmain.png" alt="">
-    <form action="">
+    <form action="modal_form.php" method="post">
+      <input type="hidden" name="page" id="page">
+      <script>
+          document.getElementById('page').value = window.location.href;
+      </script>
       <div>
       Имя: <br>
-      <input type="text">
+      <input name="name" type="text">
       </div>
       <div>
       Телефон или e-mail: <br>
-      <input type="text">
+      <input name="tel" type="text">
       </div>
       <div>
-      Доп. информация: <br>
-      <textarea></textarea>
+      Ваше Сообщение: <br>
+      <textarea name="question"></textarea>
       </div>
       <div>
       <input class="btn_sim" type="submit" value="Отправить">
@@ -61,17 +65,22 @@
         </div>
         <div class="_mainMenu">
           <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="model.html">Модели</a></li>
+            <li><a href="index.php">Главная</a></li>
+            <li><a href="about.php">О нас</a></li>
+            <li><a href="model.php">Модели</a></li>
             <li><a href="news.php">Новости</a></li>
-            <li><a href="question.html">Вопрос/ответ</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="question.php">Вопрос/ответ</a></li>
+            <li><a href="contacts.php">Контакты</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="div_content">
+        <?php
+             if (strcasecmp($_GET["message"], "true") == 0) {
+                 echo "<h2 align=\"center\">Спасибо, за сообщение.</h2>";
+             }
+          ?>
       <div class="siteWidth">
         <div class="div_list">
             <?php
