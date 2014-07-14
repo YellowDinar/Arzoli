@@ -68,7 +68,7 @@
     <div class="_close">
       <a href="javascript:">Закрыть</a>
     </div>
-    <img src="/q/images/onmain.png" alt="">
+    <img src="/images/onmain.png" alt="">
     <form action="modal_form.php" method="post">
       <input type="hidden" name="page" id="page">
       <script>
@@ -95,7 +95,7 @@
     <div class="div_header">
       <div class="siteWidth">
         <div class="_logo">
-          <a href="index.html"><img src="images/logo.png"></a>
+          <a href="index.php"><img src="images/logo.png"></a>
         </div>
         <div class="_mainMenu">
           <ul>
@@ -110,9 +110,11 @@
       </div>
     </div>
     <div class="div_content">
-        <?php
+          <?php
              if (strcasecmp($_GET["message"], "true") == 0) {
-                 echo "<h2 align=\"center\">Спасибо, за сообщение.</h2>";
+                 echo "<div class=\"animated bounceInLeft success\">
+                        Сообщение отправлено
+                       </div>";
              }
           ?>
       <div class="siteWidth">

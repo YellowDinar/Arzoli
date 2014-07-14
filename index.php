@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=1200px">
     <link rel="stylesheet/less" type="text/css" href="css/style.less">
     <script type="text/javascript" src="js/less.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+
       
     <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>      
     <script>
         $(function() {
+
             var height = $(window).height();
             var head = $('.div_header').height();
             var foot = $('.div_footer').height();
             var contentHeight = height-(head+foot);
-            var paddingContent = (50/contentHeight)*100;
 
             $('.div_content').css('min-height', contentHeight);
             $('.div_content').css('line-height', contentHeight+'px');
@@ -26,6 +28,19 @@
            $('._close a').click(function(){
             $('._backForm').hide();
            });
+
+           //For IPad
+
+           $(window).bind('orientationchange', function(event) {
+              $('.div_content').css('min-height', contentHeight);
+              $('.div_content').css('line-height', contentHeight+'px'); 
+            });
+           $('.success').css({'top': ($(window).height()-120),'left': ($(window).width()-1350)});
+
+            setTimeout(function() {
+              $('.success').removeClass('bounceInLeft');
+              $('.success').addClass('bounceOutLeft');
+            }, 3000);
         });
       </script>
       
@@ -36,7 +51,7 @@
     <div class="_close">
       <a href="javascript:">Закрыть</a>
     </div>
-    <img src="/q/images/onmain.png" alt="">
+    <img src="/images/onmain.png" alt="">
     <form action="modal_form.php" method="post">
       <input type="hidden" name="page" id="page">
       <script>
@@ -63,7 +78,7 @@
     <div class="div_header">
       <div class="siteWidth">
         <div class="_logo">
-          <a href="index.html"><img src="images/logo.png"></a>
+          <a href="index.php"><img src="images/logo.png"></a>
         </div>
         <div class="_mainMenu">
           <ul>
@@ -80,7 +95,9 @@
     <div class="div_content">
           <?php
              if (strcasecmp($_GET["message"], "true") == 0) {
-                 echo "<h2 align=\"center\">Спасибо, за сообщение.</h2>";
+                 echo "<div class=\"animated bounceInLeft success\">
+                        Сообщение отправлено
+                       </div>";
              }
           ?>
       <div class="siteWidth">
