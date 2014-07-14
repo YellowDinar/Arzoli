@@ -92,16 +92,20 @@ table {
 
 ._foot {
 	display: inline-block;
-	margin-top: 70px;
-	margin-bottom: 70px;	
 	margin-right: 160px;
+	img {
+		vertical-align: middle;	
+	}
 }
 ._inputLogo {
 	display: inline-block;
+	img {
+		vertical-align: middle;
+	}
 }
 
 .div_content {
-	min-height: 484px;
+
 }
 
 .div_footer {
@@ -153,55 +157,54 @@ table {
 }
 
 ._backForm {
-                width: 100%;
-                height: 100%;
- 
-                position: fixed;
-                display: none;
- 
-                background: rgba(0,0,0,0.3);
- 
-                ._modalWindow {
-                    height: 315px;
-                        padding: 10px 30px;
-                        position: absolute;
-                        top: 20%;
-                        left: 45%;
- 
-                        background: #c0a062;
-                        border: 1px solid #540316;
-                        color: #540316;
-                        text-align: center;    
-                        font-style: italic;
- 
-                        ._close {
-                                position: absolute;
-                                top: 0;
-                                right: 0;
-                                margin-right: 2px;
-                                margin-top: 2px;
- 
-                                a {
-                                        text-decoration: none;
-                                        color: #540316;
-                                }
-                        }
- 
-                        img {
-                                width: 100px;
- 
-                                margin-bottom: 10px;
-                        }
- 
-                        form {
-                                input {
-                                        margin-bottom: 10px;
-                                }
-                                textarea {
-                                        width: 152px;
-                                        height: 65px;
-                                        margin-bottom: 10px;
-                                }
-                        }
-                }
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    display: none;
+
+    background: rgba(0,0,0,0.3);
+
+    ._modalWindow {
+            padding: 10px 30px;
+            position: absolute;
+            top: 20%;
+            left: 45%;
+
+            background: #c0a062;
+            border: 1px solid #540316;
+            color: #540316;
+            text-align: center;    
+            font-style: italic;
+
+            ._close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin-right: 2px;
+                    margin-top: 2px;
+
+                    a {
+                            text-decoration: none;
+                            color: #540316;
+                    }
+            }
+
+            img {
+                    width: 100px;
+
+                    margin-bottom: 10px;
+            }
+
+            form {
+                    input {
+                            margin-bottom: 10px;
+                    }
+                    textarea {
+                            width: 152px;
+                            height: 65px;
+                            margin-bottom: 10px;
+                    }
+            }
+    }
 }

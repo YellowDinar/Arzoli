@@ -11,23 +11,21 @@
         type="text/javascript"></script>
       <script>
         $(function() {
-            var hwindow = screen.height;
-            if(hwindow >= 1024) {
-                hwindow -= 250;
-            } else {
-                hwindow = hwindow/2;
-            }
-            $('.div_content').css('min-height', hwindow);
+            var height = $(window).height();
+            var head = $('.div_header').height();
+            var foot = $('.div_footer').height();
+            var contentHeight = height-(head+foot);
+            var paddingContent = (50/contentHeight)*100;
 
+            $('.div_content').css('min-height', contentHeight);
+              
             $('._message .btn_sim').click(function() {
                 $('._backForm').show();
            });
            $('._close a').click(function(){
             $('._backForm').hide();
            });
-            var h = $(window).height();
-            var e = $('._modalWindow').height();
-            });
+        });
       </script>
   </head>
   <body>
