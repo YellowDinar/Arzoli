@@ -78,6 +78,13 @@
       </div>
     </div>
     <div class="div_content">
+            <?php
+             if (strcasecmp($_GET["message"], "true") == 0) {
+                 echo "<div class=\"animated bounceInLeft success\">
+                        Сообщение отправлено
+                       </div>";
+             }
+          ?>
       <div class="siteWidth">
         <div class="_news">
           <div class="_listOfNews">
