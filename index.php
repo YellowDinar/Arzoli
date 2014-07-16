@@ -102,7 +102,12 @@
           ?>
       <div class="siteWidth">
         <div class="_foot">
-          <img src="images/foot.jpg">
+            <ul class="rslides">
+              <li><img src="/images/main_page/1.jpg" alt=""></li>
+              <li><img src="/images/main_page/2.jpg" alt=""></li>
+              <li><img src="/images/main_page/3.jpg" alt=""></li>
+              <li><img src="/images/main_page/4.jpg" alt=""></li>
+            </ul>
         </div>
         <div class="_inputLogo">
           <img src="images/onmain.png">
@@ -122,8 +127,12 @@
       </div>
     </div>
     
-    <script>
     
+    <script src="js/slider.js"></script>
+    <script>
+      $(function() {
+        $(".rslides").responsiveSlides();
+      });
     </script>
     
   </body>
