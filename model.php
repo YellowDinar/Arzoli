@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=1200px">
     <link rel="stylesheet/less" type="text/css" href="css/style.less">
     <link rel="stylesheet/less" type="text/css" href="css/model.less">
+    <link rel="stylesheet" href="css/animate.css">
     <script type="text/javascript" src="js/less.js"></script>
       <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
@@ -26,6 +27,12 @@
            $('._close a').click(function(){
             $('._backForm').hide();
            });
+           $('.success').css('top', ($(window).height()-120));
+
+            setTimeout(function() {
+              $('.success').removeClass('bounceInLeft');
+              $('.success').addClass('bounceOutLeft');
+            }, 3000);
         });
       </script>
       

@@ -35,7 +35,7 @@
               $('.div_content').css('min-height', contentHeight);
               $('.div_content').css('line-height', contentHeight+'px'); 
             });
-           $('.success').css({'top': ($(window).height()-120),'left': ($(window).width()-1350)});
+           $('.success').css('top', ($(window).height()-120));
 
             setTimeout(function() {
               $('.success').removeClass('bounceInLeft');

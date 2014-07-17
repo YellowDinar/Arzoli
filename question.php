@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=1200px">
     <link rel="stylesheet/less" type="text/css" href="css/style.less">
     <link rel="stylesheet/less" type="text/css" href="css/question.less">
+    <link rel="stylesheet" href="css/animate.css">
     <script type="text/javascript" src="js/less.js"></script>
     <!-- Put this script tag to the <head> of your page -->
     <script type="text/javascript" src="http://vk.com/js/api/openapi.js?113"></script>
@@ -39,6 +40,12 @@
            $('._close a').click(function(){
             $('._backForm').hide();
            });
+           $('.success').css('top', ($(window).height()-120));
+
+            setTimeout(function() {
+              $('.success').removeClass('bounceInLeft');
+              $('.success').addClass('bounceOutLeft');
+            }, 3000);
         });
       </script>
       
