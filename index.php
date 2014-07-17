@@ -51,7 +51,7 @@
     <div class="_close">
       <a href="javascript:">Закрыть</a>
     </div>
-    <img src="/images/onmain.png" alt="">
+    <img src="images/onmain.png" alt="">
     <form action="modal_form.php" method="post">
       <input type="hidden" name="page" id="page">
       <script>
@@ -103,10 +103,10 @@
       <div class="siteWidth">
         <div class="_foot">
             <ul class="rslides">
-              <li><img src="/images/main_page/1.jpg" alt=""></li>
-              <li><img src="/images/main_page/2.jpg" alt=""></li>
-              <li><img src="/images/main_page/3.jpg" alt=""></li>
-              <li><img src="/images/main_page/4.jpg" alt=""></li>
+              <li><img src="images/main_page/1.jpg" alt=""></li>
+              <li><img src="images/main_page/2.jpg" alt=""></li>
+              <li><img src="images/main_page/3.jpg" alt=""></li>
+              <li><img src="images/main_page/4.jpg" alt=""></li>
             </ul>
         </div>
         <div class="_inputLogo">

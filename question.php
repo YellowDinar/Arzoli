@@ -49,7 +49,7 @@
     <div class="_close">
       <a href="javascript:">Закрыть</a>
     </div>
-    <img src="/images/onmain.png" alt="">
+    <img src="images/onmain.png" alt="">
     <form action="modal_form.php" method="post">
       <input type="hidden" name="page" id="page">
       <script>
@@ -100,12 +100,12 @@
           ?>
       <div class="siteWidth">
         <h1>ВОПРОС-ОТВЕТ</h1> 
-        <div id="question" class="div_questions">
-            <div id="vk_comments"></div>
-            <script type="text/javascript">
-                VK.Widgets.Comments("vk_comments", {limit: 10, width: "520", attach: "*"});
-            </script>
-        </div>
+        <div class="alert alert-danger">Скажите, где можно купить обувь Arzoli? Анна, Иваново.</div>
+        <div class="alert alert-success">Обувь Arzoli можно приобрести в интернет-магазине SALAMA.RU, где представлены все коллекции обуви данного бренда.</div><br><br><br>
+        <div class="alert alert-danger">В каком именно магазине в г.Казани наибольший выбор марки Арзоли? Дамир, Казань. </div>
+        <div class="alert alert-success">Наибольший выбор обуви Арзоли в магазине Salamander по адресу ул.Чехова д.9.</div><br><br><br>
+          <div class="alert alert-danger">Как можно узнать о скидках? Алина, Альметевск.</div>
+        <div class="alert alert-success">Информацию о скидках можете узнать на сайте <a href="http://salama.ru">salama.ru</a>.</div>
       </div>
     </div>
     <div class="div_footer">

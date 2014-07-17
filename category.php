@@ -34,7 +34,7 @@
     <div class="_close">
       <a href="javascript:">Закрыть</a>
     </div>
-    <img src="/images/onmain.png" alt="">
+    <img src="images/onmain.png" alt="">
     <form action="modal_form.php" method="post">
       <input type="hidden" name="page" id="page">
       <script>
