@@ -33,11 +33,17 @@
                   });
                   var s = new YMaps.Style();
                   s.iconStyle = new YMaps.IconStyle();
-                  s.iconStyle.href = "images/yandex.png";
                   s.iconStyle.size = new YMaps.Point(71, 30);
                   var address= $(this).text().replace(/"/gi, '\\\"');
                   address = address.split(',');
-                  address = address.slice(1, address.length).join();
+                  address = address[0];
+                  if(address.indexOf("Arzoli") > -1) {
+                    s.iconStyle.href = "images/yandex.png";
+                  }else if(address.indexOf("Rieker") > -1) {
+                    s.iconStyle.href = "images/yandex2.png";
+                  }else if(address.indexOf("Salamander") > -1) {
+                    s.iconStyle.href = "images/yandex3.png";
+                  }
                   var points = [];
                   var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
                   map.addControl(new YMaps.Zoom());
