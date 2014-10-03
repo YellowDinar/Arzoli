@@ -74,13 +74,38 @@ table {
 		li {
 			display: inline;
 			margin-left: 25px;
-
+      position: relative;
 			color: #540316;
 			font-size: 17px;
 			font-style: italic;
 			&:first-child {
 				margin-left:0px;
 			}
+      #inner{
+        width: 105px;
+        text-align: center;
+        position: absolute;
+        display: none;
+        top: 24px;
+        left: -31px;
+        background: #c0a062;
+        -webkit-border-bottom-right-radius: 3px;
+        -webkit-border-bottom-left-radius: 3px;
+        -moz-border-radius-bottomright: 3px;
+        -moz-border-radius-bottomleft: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border: 1px solid #540316;
+        border-top: 0px;
+        li {
+          padding: 0;
+          margin: 5px 0;
+          display: block;
+          a {
+            font-size: 15px;
+          }
+        }
+      }
 		}
 	}
 
